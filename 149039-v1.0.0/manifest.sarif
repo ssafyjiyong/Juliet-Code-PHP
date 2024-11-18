@@ -1,0 +1,103 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "runs": [
+    {
+      "properties": {
+        "id": 149039,
+        "version": "1.0.0",
+        "type": "source code",
+        "status": "candidate",
+        "submissionDate": "2014-08-01",
+        "language": "php",
+        "author": "WordPress Foundation",
+        "description": "CVE-2013-7233",
+        "state": "bad",
+        "cves": [
+          "CVE-2013-7233"
+        ],
+        "application": "cpe:2.3:a:wordpress:wordpress:2.0:-:*:*:*:*:*:*",
+        "dependencies": [
+          "wordpress-v2.0"
+        ]
+      },
+      "tool": {
+        "driver": {
+          "name": "SARD - SAMATE",
+          "fullName": "Software Assurance Reference Dataset Project",
+          "informationUri": "https://samate.nist.gov/SARD/",
+          "version": "5.0.0",
+          "organization": "NIST",
+          "supportedTaxonomies": [
+            {
+              "name": "CWE",
+              "index": 0
+            }
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "wp-admin/options-discussion.php"
+          },
+          "length": 5510,
+          "sourceLanguage": "php",
+          "hashes": {
+            "sha-256": "e58b3a28e7e6e975f6bd496774eeaae9d6ec52808660a2f2182f66dd73822870"
+          }
+        }
+      ],
+      "taxonomies": [
+        {
+          "name": "CWE",
+          "version": "4.6",
+          "informationUri": "https://cwe.mitre.org/data/published/cwe_v4.6.pdf",
+          "downloadUri": "https://cwe.mitre.org/data/xml/cwec_v4.6.xml.zip",
+          "organization": "MITRE",
+          "shortDescription": {
+            "text": "The MITRE Common Weakness Enumeration"
+          },
+          "isComprehensive": false,
+          "taxa": [
+            {
+              "id": "352",
+              "name": "Cross-Site Request Forgery (CSRF)"
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "ruleId": "CWE-352",
+          "message": {
+            "text": "Cross-Site Request Forgery (CSRF)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "wp-admin/options-discussion.php",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 11
+                }
+              }
+            }
+          ],
+          "taxa": [
+            {
+              "toolComponent": {
+                "name": "CWE",
+                "index": 0
+              },
+              "id": "352",
+              "index": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
